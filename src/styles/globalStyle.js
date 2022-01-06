@@ -23,6 +23,10 @@ const GlobalStyle = createGlobalStyle`
      list-style: none;
  }
 
+ a{
+     text-decoration: none;
+ }
+
 `;
 
 export default GlobalStyle;

@@ -27,8 +27,7 @@ border-bottom: black 3px solid;
 `;
 
 const Header = styled.header`
-  height: 5rem;
-  
+  height: 5rem;  
   display: flex;
   justify-content: space-between; 
   align-items: center; 
@@ -37,9 +36,26 @@ const Header = styled.header`
 
 const Navbar = styled.ul`
   display: flex;
-  justify-content: space-around;
-  gap: 0.5rem;
-  
+  gap: 1.5rem;
+
+  li{
+    font-family: "Karla", sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    letter-spacing: 1.5px;
+    color: #837D88;
+    text-transform: uppercase;
+  }
+
+  &>:last-child{
+    a{
+      color: #2C2830;
+      padding: 0.8rem 1.8rem;
+      border: 1.5px solid #2C2830;
+    }    
+    
+  }  
 
 `;
 
@@ -55,9 +71,7 @@ function App() {
             <li>How we work</li>
             <li>Blog</li>
             <li>Account</li>
-            <li>
-              View Plans
-            </li>
+            <li><a href="#">View Plans</a></li>
           </Navbar>
         </Header>
       </Container>
