@@ -13,10 +13,18 @@ const GlobalStyle = createGlobalStyle`
 
  h1 {
     font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    font-size: 4.5rem;
+    line-height: 4rem;
+    letter-spacing: -1px;
+    color: #FFFFFF;
  }
 
  p {
      font-family: "Karla", sans-serif;
+     font-weight: 400;
+     line-height: 1.6rem;
+     color: #FFFFFF;
  }
 
  li{
@@ -25,6 +33,7 @@ const GlobalStyle = createGlobalStyle`
 
  a{
      text-decoration: none;
+     
  }
 
 `;
