@@ -1,12 +1,9 @@
-export const SnappyProcess = (props) => {
-  <svg xmlns="http://www.w3.org/2000/svg" width={86} height={86} {...props}>
-    <g fill="none" fillRule="evenodd">
-      <circle cx={43} cy={43} r={43} fill="#96A9C6" />
-      <path
-        fill="#FFF"
-        fillRule="nonzero"
-        d="M32 59h1.195l21.072-20.146c.276-.356.123-.534-.46-.534H45.11l9.158-10.786c.276-.356.061-.534-.612-.534h-11.67c-.337 0-.613.119-.888.356l-8.515 14.645c-.061.356.122.534.582.534h8.423L32 59z"
-      />
-    </g>
-  </svg>;
-};
+export const SvgFacebook = (props) => {
+  return (<svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} {...props}>
+  <path
+    fill= {props.fill}
+    d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"
+  />
+</svg>
+  )
+} 

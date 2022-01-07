@@ -12,6 +12,9 @@ import twitter from "../src/images/icon-twitter.svg";
 import pinterest from "../src/images/icon-pinterest.svg";
 import instagram from "../src/images/icon-instagram.svg";
 
+// Hover States
+import { SvgFacebook } from "./styles/Svgs";
+
 // import { IntroPattern } from "./styles/Shapes";
 // import introPattern from "../src/images/bg-pattern-intro-right-desktop.svg";
 
@@ -47,15 +50,12 @@ const Navbar = styled.ul`
   align-items: center;
   gap: 1.5rem;
 
-  /* li {
-    font-family: "Karla", sans-serif;
-    font-weight: 700;
-    font-size: 0.8rem;
-    line-height: 1rem;
-    letter-spacing: 1.5px;
-    color: #837d88;
-    text-transform: uppercase;
-  } */
+  li{
+    &:hover{
+      color: #2C2830;
+      cursor: pointer;
+    }
+  }
 
   & > :last-child {
     a {
@@ -63,7 +63,16 @@ const Navbar = styled.ul`
       padding: 0.8rem 1.8rem;
       border: 1.5px solid #2c2830;
       width: 9rem;
+
+      &:hover{
+        background: #2C2830;
+        color: #FFFFFF;
+      }
     }
+  }
+
+  img{
+
   }
 `;
 
@@ -114,6 +123,12 @@ const PlansButton = styled.a`
 
   width: 9.4rem;
   padding: 0.8rem 1.8rem;
+
+
+  &:hover{
+    background: #FFFFFF;
+    color: #2C2830;
+  }
 `;
 
 const CoverImage = styled.section`
@@ -203,6 +218,9 @@ const FooterHeader = styled(Header)`
  
 `;
 
+const FooterIcon = styled.li`
+`;
+
 const FooterLine = styled(Line)`
   width: 100%;
   background: #DADADA;
@@ -223,6 +241,11 @@ const Company = styled.ul`
   &>:nth-child(n+2){
     color: #2D2641;
     margin-bottom: 1rem;
+
+    &:hover{
+      cursor: pointer;
+      text-decoration: underline;
+    }
   }
 
 `;
@@ -230,6 +253,7 @@ const Company = styled.ul`
 const Help = styled(Company)``;
 const Contact= styled(Company)``;
 const Others = styled(Company)``;
+
 
 function App() {
   return (
@@ -320,18 +344,18 @@ function App() {
             <FooterHeader>
               <Logo />
               <Navbar>
-                <li>
+                <FooterIcon>
                   <img src={facebook} alt="facebook" />
-                </li>
-                <li>
+                </FooterIcon>
+                <FooterIcon>
                   <img src={twitter} alt="twitter" />
-                </li>
-                <li>
+                </FooterIcon>
+                <FooterIcon>
                   <img src={pinterest} alt="pinterest" />
-                </li>
-                <li>
+                </FooterIcon>
+                <FooterIcon>
                   <img src={instagram} alt="instagram" />
-                </li>
+                </FooterIcon>
               </Navbar>
             </FooterHeader>
             <FooterLine />
