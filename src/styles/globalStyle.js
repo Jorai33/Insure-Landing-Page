@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
 
  body{
      font-size: 16px;
+     overflow-x: hidden;
  }
 
  h1 {
@@ -46,6 +47,13 @@ const GlobalStyle = createGlobalStyle`
 
  li{
      list-style: none;
+     font-family: "Karla", sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    letter-spacing: 1.5px;
+    color: #837d88;
+    text-transform: uppercase;
  }
 
  a{

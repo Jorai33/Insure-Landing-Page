@@ -7,6 +7,10 @@ import coverImage from "../src/images/image-intro-desktop.jpg";
 import snappyProcess from "../src/images/icon-snappy-process.svg";
 import prices from "../src/images/icon-affordable-prices.svg";
 import peopleFirst from "../src/images/icon-people-first.svg";
+import facebook from "../src/images/icon-facebook.svg";
+import twitter from "../src/images/icon-twitter.svg";
+import pinterest from "../src/images/icon-pinterest.svg";
+import instagram from "../src/images/icon-instagram.svg";
 
 // import { IntroPattern } from "./styles/Shapes";
 // import introPattern from "../src/images/bg-pattern-intro-right-desktop.svg";
@@ -40,9 +44,10 @@ const Header = styled.header`
 
 const Navbar = styled.ul`
   display: flex;
+  align-items: center;
   gap: 1.5rem;
 
-  li {
+  /* li {
     font-family: "Karla", sans-serif;
     font-weight: 700;
     font-size: 0.8rem;
@@ -50,7 +55,7 @@ const Navbar = styled.ul`
     letter-spacing: 1.5px;
     color: #837d88;
     text-transform: uppercase;
-  }
+  } */
 
   & > :last-child {
     a {
@@ -150,9 +155,11 @@ const Icon = styled.div`
 const Quality = styled.h2`
   color: #2c2830;
   margin-bottom: 1rem;
+  text-transform: none;
 `;
 
 const QualityDesc = styled.p`
+text-transform: none;
   color: #837d88;
 `;
 
@@ -175,14 +182,54 @@ const BannerContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 `;
 
 const WorkButton = styled(PlansButton)`
   /* text-align: center; */
   width: 10.7rem;
+`;
+
+const Footer = styled.footer`
+  width: 100%;
+  height: 30rem;
+  background-color: #fafafa;
+  padding-top: 4rem;
+`;
+
+const FooterContainer = styled(Container)`
+`;
+
+const FooterHeader = styled(Header)`
+ 
+`;
+
+const FooterLine = styled(Line)`
+  width: 100%;
+  background: #DADADA;
+  margin-top: 2.25rem;
+  margin-bottom: 3rem;
+`;
+
+const LastInfo = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+`;
+
+const Company = styled.ul`
+  &>:first-child{
+    margin-bottom: 2.25rem;
+  }
+  
+  &>:nth-child(n+2){
+    color: #2D2641;
+    margin-bottom: 1rem;
+  }
 
 `;
+
+const Help = styled(Company)``;
+const Contact= styled(Company)``;
+const Others = styled(Company)``;
 
 function App() {
   return (
@@ -268,6 +315,64 @@ function App() {
             </BannerContainer>
           </Banner>
         </DescriptionContainer>
+        <Footer>
+          <FooterContainer>
+            <FooterHeader>
+              <Logo />
+              <Navbar>
+                <li>
+                  <img src={facebook} alt="facebook" />
+                </li>
+                <li>
+                  <img src={twitter} alt="twitter" />
+                </li>
+                <li>
+                  <img src={pinterest} alt="pinterest" />
+                </li>
+                <li>
+                  <img src={instagram} alt="instagram" />
+                </li>
+              </Navbar>
+            </FooterHeader>
+            <FooterLine />
+            <LastInfo>
+              <Company>
+                
+                  <li>OUR COMPANY</li>
+                  <li>HOW WE WORK</li>
+                  <li>WHY INSURE?</li>
+                  <li>VIEW PLANS</li>
+                  <li>REVIEWS</li>
+                
+              </Company>
+              <Help>
+              
+                  <li>HELP ME</li>
+                  <li>FAQ</li>
+                  <li>TERMS OF USE</li>
+                  <li>PRIVACY POLICY</li>
+                  <li>COOKIES</li>
+                
+              </Help>
+              <Contact>
+                
+                  <li>CONTACT</li>
+                  <li>SALES</li>
+                  <li>SUPPORT</li>
+                  <li>LIVE CHAT</li>
+                
+              </Contact>
+              <Others>
+                
+                  <li>OTHERS</li>
+                  <li>CAREERS</li>
+                  <li>PRESS</li>
+                  <li>LICENSES</li>
+                
+              </Others>
+            </LastInfo>
+          </FooterContainer>
+        </Footer>
       </MainContainer>
     </ThemeProvider>
   );
