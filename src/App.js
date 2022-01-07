@@ -13,7 +13,9 @@ import pinterest from "../src/images/icon-pinterest.svg";
 import instagram from "../src/images/icon-instagram.svg";
 
 // Hover States
-import { SvgFacebook } from "./styles/Svgs";
+import { SvgFacebook, SvgInstagram, SvgPinterest, SvgTwitter } from "./styles/Svgs";
+
+import { useState } from "react";
 
 // import { IntroPattern } from "./styles/Shapes";
 // import introPattern from "../src/images/bg-pattern-intro-right-desktop.svg";
@@ -256,6 +258,12 @@ const Others = styled(Company)``;
 
 
 function App() {
+
+  const [ facebookHovered, setFbHovered] = useState(false);
+  const [ twitterHovered, setTwHovered] = useState(false);
+  const [ pinterestHovered, setPtHovered] = useState(false);
+  const [ instagramHovered, setIgHovered] = useState(false);
+
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
@@ -345,16 +353,33 @@ function App() {
               <Logo />
               <Navbar>
                 <FooterIcon>
-                  <img src={facebook} alt="facebook" />
+                  {/* <img src={facebook} alt="facebook" /> */}
+                  <SvgFacebook 
+                    fill={facebookHovered ? "#2C2830" : "#837D88" }
+                    onMouseOver={() => setFbHovered(!facebookHovered)}
+                    onMouseOut={() => setFbHovered(!facebookHovered)}
+                  />
                 </FooterIcon>
                 <FooterIcon>
-                  <img src={twitter} alt="twitter" />
+                <SvgTwitter 
+                    fill={twitterHovered ? "#2C2830" : "#837D88" }
+                    onMouseOver={() => setTwHovered(!twitterHovered)}
+                    onMouseOut={() => setTwHovered(!twitterHovered)}
+                  />
                 </FooterIcon>
                 <FooterIcon>
-                  <img src={pinterest} alt="pinterest" />
+                <SvgPinterest 
+                    fill={pinterestHovered ? "#2C2830" : "#837D88" }
+                    onMouseOver={() => setPtHovered(!pinterestHovered)}
+                    onMouseOut={() => setPtHovered(!pinterestHovered)}
+                  />
                 </FooterIcon>
                 <FooterIcon>
-                  <img src={instagram} alt="instagram" />
+                <SvgInstagram 
+                    fill={instagramHovered ? "#2C2830" : "#837D88" }
+                    onMouseOver={() => setIgHovered(!instagramHovered)}
+                    onMouseOut={() => setIgHovered(!instagramHovered)}
+                  />
                 </FooterIcon>
               </Navbar>
             </FooterHeader>
