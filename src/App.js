@@ -4,8 +4,12 @@ import styled from "styled-components";
 
 import Logo from "./ImageComponents/Logo";
 import coverImage from "../src/images/image-intro-desktop.jpg";
+import snappyProcess from "../src/images/icon-snappy-process.svg";
+import prices from "../src/images/icon-affordable-prices.svg";
+import peopleFirst from "../src/images/icon-people-first.svg";
+
 // import { IntroPattern } from "./styles/Shapes";
-import introPattern from "../src/images/bg-pattern-intro-right-desktop.svg";
+// import introPattern from "../src/images/bg-pattern-intro-right-desktop.svg";
 
 const theme = {
   colors: {
@@ -22,10 +26,9 @@ const MainContainer = styled.div`
   background-color: #ffffff;
 `;
 
-const HeaderContainer = styled.div`
+const Container = styled.div`
   width: 70vw;
   margin: auto;
-
 `;
 
 const Header = styled.header`
@@ -63,26 +66,19 @@ const Cover = styled.div`
   width: 100%;
   height: 37.5rem;
   background-color: #2d2641;
-  
+
   position: relative;
 `;
 
-const CoverContainer = styled.div`
-  width: 70vw;
-  margin: auto;
-
+const CoverContainer = styled(Container)`
   display: grid;
   grid-template-columns: 1fr 1fr;
-
 `;
 
 const Content = styled.section`
   display: flex;
   flex-direction: column;
-  
- 
 `;
-
 
 const Line = styled.div`
   width: 9.5rem;
@@ -95,14 +91,11 @@ const Line = styled.div`
 
 const Title = styled.h1`
   margin-bottom: 1rem;
-  
 `;
 
 const Text = styled.p`
   margin-bottom: 1.5rem;
-  
 `;
-
 
 const PlansButton = styled.a`
   font-family: "Karla", sans-serif;
@@ -116,8 +109,6 @@ const PlansButton = styled.a`
 
   width: 9.4rem;
   padding: 0.8rem 1.8rem;
-  
-  
 `;
 
 const CoverImage = styled.section`
@@ -126,18 +117,79 @@ const CoverImage = styled.section`
   margin-top: 6.5rem;
 `;
 
-const Pattern = styled.div`
-  position: absolute;  
-  left: 68rem;
-  width: 43.5rem;
-`
+// const Pattern = styled.div`
+//   position: absolute;
+//   left: 68rem;
+//   width: 43.5rem;
+// `
+
+const DescriptionContainer = styled(Container)`
+  height: 83.5rem;
+`;
+
+const ColoredLine = styled(Line)`
+  background: #c396c6;
+  margin-top: 19rem;
+`;
+
+const BlackTitle = styled(Title)`
+  color: #2c2830;
+  margin-bottom: 6rem;
+`;
+
+const Qualities = styled.ul`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+`;
+
+const Icon = styled.div`
+  margin-bottom: 2rem;
+`;
+
+const Quality = styled.h2`
+  color: #2c2830;
+  margin-bottom: 1rem;
+`;
+
+const QualityDesc = styled.p`
+  color: #837d88;
+`;
+
+const Banner = styled.div`
+  width: 100%;
+  height: 15.6rem;
+  background-color: #2d2641;
+  margin-top: 10rem;
+
+  h3 {
+    color: white;
+  }
+`;
+
+const BannerContainer = styled.div`
+  width: 85%;
+  height: 100%;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+`;
+
+const WorkButton = styled(PlansButton)`
+  /* text-align: center; */
+  width: 10.7rem;
+
+`;
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <MainContainer>
-        <HeaderContainer>
+        <Container>
           <Header>
             <Logo />
             <Navbar>
@@ -149,16 +201,17 @@ function App() {
               </li>
             </Navbar>
           </Header>
-        </HeaderContainer>
+        </Container>
         <Cover>
-          <Pattern>
+          {/* <Pattern>
             <img src={introPattern} alt="pattern" />
-          </Pattern>
-
+          </Pattern> */}
           <CoverContainer>
             <Content>
               <Line />
-              <Title>Humanizing <br /> your insurance.</Title>
+              <Title>
+                Humanizing <br /> your insurance.
+              </Title>
               <Text>
                 Get your life insurance coverage easier and faster. We blend our
                 expertise and technology to help you find the plan that’s right
@@ -171,6 +224,50 @@ function App() {
             </CoverImage>
           </CoverContainer>
         </Cover>
+        <DescriptionContainer>
+          <ColoredLine />
+          <BlackTitle>We're different</BlackTitle>
+          <Qualities>
+            <li>
+              <Icon>
+                <img src={snappyProcess} alt="Thunder" />
+              </Icon>
+              <Quality>Snappy Process</Quality>
+              <QualityDesc>
+                Our application process can be completed in minutes, not hours.
+                Don’t get stuck filling in tedious forms.
+              </QualityDesc>
+            </li>
+            <li>
+              <Icon>
+                <img src={prices} alt="Money" />
+              </Icon>
+              <Quality>Affordable Prices</Quality>
+              <QualityDesc>
+                We don’t want you worrying about high monthly costs. Our prices
+                may be low, but we still offer the best coverage possible.
+              </QualityDesc>
+            </li>
+            <li>
+              <Icon>
+                <img src={peopleFirst} alt="People" />
+              </Icon>
+              <Quality>People First</Quality>
+              <QualityDesc>
+                Our plans aren’t full of conditions and clauses to prevent
+                payouts. We make sure you’re covered when you need it.
+              </QualityDesc>
+            </li>
+          </Qualities>
+          <Banner>
+            <BannerContainer>
+              <h3>
+                Find out more <br /> about how we work
+              </h3>
+              <WorkButton href="#">How we work</WorkButton>
+            </BannerContainer>
+          </Banner>
+        </DescriptionContainer>
       </MainContainer>
     </ThemeProvider>
   );

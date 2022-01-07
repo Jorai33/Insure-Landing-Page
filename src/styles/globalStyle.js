@@ -20,6 +20,23 @@ const GlobalStyle = createGlobalStyle`
     color: #FFFFFF;
  }
 
+ h2 {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    font-size: 1.75rem;
+    line-height: 2.375rem;
+    letter-spacing: -1px;
+ }
+
+ h3 {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    letter-spacing: -0.777778px;
+
+ }
+
  p {
      font-family: "Karla", sans-serif;
      font-weight: 400;
