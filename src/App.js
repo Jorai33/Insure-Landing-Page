@@ -53,6 +53,7 @@ const Navbar = styled.ul`
   gap: 1.5rem;
 
   li{
+
     &:hover{
       color: #2C2830;
       cursor: pointer;
@@ -65,6 +66,8 @@ const Navbar = styled.ul`
       padding: 0.8rem 1.8rem;
       border: 1.5px solid #2c2830;
       width: 9rem;
+
+      transition: all 1s ease-in-out;
 
       &:hover{
         background: #2C2830;
@@ -125,6 +128,8 @@ const PlansButton = styled.a`
 
   width: 9.4rem;
   padding: 0.8rem 1.8rem;
+
+  transition: all 1s ease-in-out;
 
 
   &:hover{
