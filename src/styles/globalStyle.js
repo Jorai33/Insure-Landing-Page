@@ -19,6 +19,14 @@ const GlobalStyle = createGlobalStyle`
     line-height: 4rem;
     letter-spacing: -1px;
     color: #FFFFFF;
+
+    @media only screen and (max-width: 25rem) {
+    font-size: 3rem;
+    line-height: 3rem;
+    letter-spacing: -0.67px;
+
+    margin-top: 5.8rem;
+  }
  }
 
  h2 {
@@ -35,6 +43,13 @@ const GlobalStyle = createGlobalStyle`
     font-size: 3.5rem;
     line-height: 3.5rem;
     letter-spacing: -0.777778px;
+
+
+    @media screen {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        letter-spacing: -0.56px;
+    }
 
  }
 
@@ -59,6 +74,10 @@ const GlobalStyle = createGlobalStyle`
  a{
      text-decoration: none;
      
+ }
+
+ img{
+     max-width: 100%;
  }
 
 `;
