@@ -7,10 +7,6 @@ import coverImage from "../src/images/image-intro-desktop.jpg";
 import snappyProcess from "../src/images/icon-snappy-process.svg";
 import prices from "../src/images/icon-affordable-prices.svg";
 import peopleFirst from "../src/images/icon-people-first.svg";
-// import facebook from "../src/images/icon-facebook.svg";
-// import twitter from "../src/images/icon-twitter.svg";
-// import pinterest from "../src/images/icon-pinterest.svg";
-// import instagram from "../src/images/icon-instagram.svg";
 
 // Hover States
 import {
@@ -23,8 +19,7 @@ import {
 
 import { useState } from "react";
 
-// import { IntroPattern } from "./styles/Shapes";
-// import introPattern from "../src/images/bg-pattern-intro-right-desktop.svg";
+
 
 const theme = {
   colors: {
@@ -393,12 +388,6 @@ function App() {
   const [pinterestHovered, setPtHovered] = useState(false);
   const [instagramHovered, setIgHovered] = useState(false);
 
-  const [hamburgerOpen, setHamburgerOpen] = useState(false);
-
-  const handleToggle = () => {
-    setHamburgerOpen(!hamburgerOpen);
-  }
-
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
@@ -406,7 +395,7 @@ function App() {
         <Container>
           <Header>
             <Logo />
-            <StyledHamburger open={hamburgerOpen} onClick={handleToggle} > 
+            <StyledHamburger> 
             
             
             </StyledHamburger>
