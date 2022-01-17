@@ -10,11 +10,7 @@ This is a solution to the [Insure landing page challenge on Frontend Mentor](htt
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 
 
@@ -29,6 +25,7 @@ Users should be able to:
 
 ### Screenshot
 
+![Desktop](https://user-images.githubusercontent.com/47177361/149762683-85245253-cb75-4db6-99be-e7032a8f2728.png)
 
 
 ### Links
@@ -49,7 +46,7 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@Jorai33](https://www.frontendmentor.io/profile/Jorai33)
 
 
 
