@@ -404,7 +404,7 @@ function App() {
               <li>Blog</li>
               <li>Account</li>
               <li>
-                <a href="#">View Plans</a>
+                <a href="https://www.frontendmentor.io/" target="_blank" rel="noreferrer">View Plans</a>
               </li>
             </Navbar>
           </Header>
